@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 326px;
+    text-align: center;
+    border-radius: 15px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.cardHeader {
+    background-image: url('./images/bg-pattern-card.svg');
+    height: 140px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    justify-self: flex-end;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
