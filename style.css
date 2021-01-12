@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+    --imgWidth: 165vw;
+    --imgX: -130vw;
+    --imgY: -120vw;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,13 +16,58 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     height: 100vh;
+    width: 100vw;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    background-color: hsl(185, 75%, 39%);
+    overflow: hidden;
+    position: fixed;
 }
 
-.card {
+.top-bg {
+    position: absolute;
+    left: var(--imgX);
+    top: var(--imgY);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+}
+
+.top-bg img {
+    width: var(--imgWidth);
+}
+
+.bottom-bg {
+    position: absolute;
+    right: var(--imgX);
+    bottom: var(--imgY);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+}
+
+.bottom-bg img {
+    width: var(--imgWidth);
+}
+
+.card h2 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: #2e3349;
+}
+
+.card p {
+    color: #6b7082;
+}
+
+section {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.card {
+    position: relative;
     width: 326px;
     text-align: center;
     border-radius: 15px;
@@ -28,6 +80,47 @@ body {
     height: 140px;
 }
 
+.cardImg img {
+    width: 96px;
+    border-radius: 50%;
+    bottom: 50%;
+    margin-top: -48px;
+    border: solid #ffffff 5px;
+}
+
+.personalInfo div {
+    margin: 24px 0 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8.5px;
+}
+
+.personalInfo div p {
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.personalInfo p {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.cardStat {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #e8e9ec;
+    margin-top: 28px;
+    padding: 24px 0 27px;
+}
+
+.cardStat p {
+    margin-top: 9px;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 1.5px;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -35,4 +128,24 @@ body {
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 750px) {
+    :root {
+        --imgWidth: 160vw;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    :root {
+        --imgWidth: 155vw;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    :root {
+        --imgWidth: 68vw;
+        --imgX: 10vw;
+        --imgY: 10vw;
+    }
 }
