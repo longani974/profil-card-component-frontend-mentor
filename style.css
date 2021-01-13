@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 :root {
     --imgWidth: 165vw;
-    --imgX: -130vw;
-    --imgY: -120vw;
+    /* --imgX: -130vw;
+    --imgY: -120vw; */
+    --imgX: 40vw;
+    --imgY: 80vw;
 }
 
 * {
@@ -20,11 +22,16 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400;
     background-color: hsl(185, 75%, 39%);
-    overflow: hidden;
-    position: fixed;
+    /* overflow: hidden;
+    position: fixed; */
+    background-image: url(./images/bg-pattern-top.svg),
+        url(./images/bg-pattern-bottom.svg);
+    background-position: right var(--imgX) bottom var(--imgY),
+        left var(--imgX) top var(--imgY);
+    background-repeat: no-repeat;
 }
 
-.top-bg {
+/* .top-bg {
     position: absolute;
     left: var(--imgX);
     top: var(--imgY);
@@ -46,7 +53,7 @@ body {
 
 .bottom-bg img {
     width: var(--imgWidth);
-}
+} */
 
 .card h2 {
     font-weight: bold;
@@ -133,6 +140,8 @@ section {
 @media screen and (min-width: 750px) {
     :root {
         --imgWidth: 160vw;
+        --imgX: 30vw;
+        --imgY: 60vw;
     }
 
     .card {
@@ -143,13 +152,23 @@ section {
 @media screen and (min-width: 1000px) {
     :root {
         --imgWidth: 155vw;
+        --imgX: 50vw;
+        --imgY: 30vw;
     }
 }
 
 @media screen and (min-width: 1440px) {
     :root {
         --imgWidth: 68vw;
-        --imgX: 10vw;
-        --imgY: 10vw;
+        --imgX: 40vw;
+        --imgY: 35vw;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    :root {
+        --imgWidth: 68vw;
+        --imgX: 45vw;
+        --imgY: 25vw;
     }
 }
